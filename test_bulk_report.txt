@@ -1,0 +1,43 @@
+{
+    "at_report": {
+        "0": {
+            "ra": {
+                "value": "183.27688",
+                "error": "",
+                "units": "deg"
+            },
+            "dec": {
+                "value": "0.04",
+                "error": "",
+                "units": "deg"
+            },
+            "reporting_group_id": "114",
+            "discovery_data_source_id": "114",
+            "reporter": "Xingzhuo Chen (Texas A&M U.), Lei Hu (Purple Mountain Observatory),        Jiawen Yang (Texas A&M U.), Jian Tao (Texas A&M U.), Lifan Wang (Texas A&M U.),        Xiaofeng Wang (Tsinghua University), Antonella Palmese (KICP), Dietrich Baade (ESO),        Segev BenZvi (U. of Rochester), Peter Brown (Texas A&M U.), Jeffery Cooke (Swinburne U.), Kyle Dawson (The University of Utah),         Melissa Graham (University of Washington), Ji-an Jiang (The University of Tokyo), Alex Kim (LBNL),         Anton Koekemoer (STSci), Wenxiong Li (Tel Aviv U.), Jeremy Mould (Swinburne U.), Peter Nugent (LBNL),         Ferdinando Patat (ESO), Syed A. Uddin (Carnegie Observatories), Jujia Zhang (Yunnan Astronomical Observatory)",
+            "discovery_datetime": "2459331.652579669",
+            "at_type": "1",
+            "host_name": "",
+            "host_redshift": "",
+            "transient_redshift": "",
+            "internal_name": "",
+            "remarks": "",
+            "photometry": {
+                "photometry_group": {
+                    "0": {
+                        "obsdate": "2459331.652579669",
+                        "flux": "21.49413065206108",
+                        "flux_error": "0.0662853684386435",
+                        "flux_units": "1",
+                        "filter_value": "21",
+                        "instrument_value": "172"
+                    }
+                }
+            },
+            "related_files": "",
+            "non_detection": {
+                "archiveid": "0",
+                "archival_remarks": "DECam Legacy Survey"
+            }
+        }
+    }
+}
