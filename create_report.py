@@ -158,8 +158,8 @@ def create_at_entry(ra, dec, JD, photometry_group, non_detection="", related_fil
 
     entry["reporting_group_id"]= "114"  # our DESIRT group id.
     entry["discovery_data_source_id"]="114"  # DESIRT
-    entry["reporter"]= "Xingzhuo Chen (Texas A&M U.), Lei Hu (Purple Mountain Observatory),\
-        Jiawen Yang (Texas A&M U.), Jian Tao (Texas A&M U.), Lifan Wang (Texas A&M U.),\
+    entry["reporter"]= "Jiawen Yang (Texas A&M U.), Xingzhuo Chen (Texas A&M U.), Lei Hu (Purple Mountain Observatory),\
+        Jian Tao (Texas A&M U.), Lifan Wang (Texas A&M U.),\
         Xiaofeng Wang (Tsinghua University), Antonella Palmese (KICP), Dietrich Baade (ESO),\
         Segev BenZvi (U. of Rochester), Peter Brown (Texas A&M U.), Jeffery Cooke (Swinburne U.), Kyle Dawson (The University of Utah), \
         Melissa Graham (University of Washington), Ji-an Jiang (The University of Tokyo), Alex Kim (LBNL), \
@@ -227,12 +227,13 @@ def blockPrint():
 def send_json_report(url,json_file_path,api_key):
     try:
         json_url=url+'/bulk-report'
+        headers={'User-Agent':'tns_marker{"tns_id":2040,"type": "user", "name":"jwyang"}'}     # FIXME
         # read json data from file
         json_read=format_to_json(open(json_file_path).read())
         # construct a dictionary of api key data and json data
         json_data={'api_key':api_key, 'data':json_read}
         # send json report using request module
-        response=requests.post(json_url, data=json_data)
+        response=requests.post(json_url, headers=headers, data=json_data)
         # return response
         return response
     except Exception as e:
@@ -321,10 +322,11 @@ def reply(url, report_id,api_key):
     try:
         # url for getting report reply
         reply_url=url+'/bulk-report-reply'
+        headers={'User-Agent':'tns_marker{"tns_id":2040,"type": "user", "name":"jwyang"}'}     # FIXME
         # construct a dictionary of api key data and report id
         reply_data={'api_key':api_key, 'report_id':report_id}
         # send report ID using request module
-        response=requests.post(reply_url, data=reply_data)
+        response=requests.post(reply_url, headers=headers, data=reply_data)
         # return response
         return response
     except Exception as e:
